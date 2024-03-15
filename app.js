@@ -1,7 +1,9 @@
 const express = require("express");
-
+const mongoose = require("mongoose");
 const app = express();
 const port = 8000;
+
+mongoose.connect("mongodb://localhost:27017/dissertation");
 
 app.set("view engine", "ejs");
 app.get("/index", (req, res) => res.render("index.ejs"));
