@@ -12,7 +12,7 @@ app.get("/about", (req, res) => res.render("about"));
 app.get("/contact", (req, res) => res.render("contact"));
 app.get("/policy", (req, res) => res.render("policy"));
 app.get("/feedback", (req, res) => res.render("feedback"));
-app.get("/addUserForm", (req, res) => res.render("addUserForm"));
+app.get("/addUser", (req, res) => res.render("addUser"));
 
 app.listen(port, () =>
   console.log(`App listening at http://localhost:${port}`)
