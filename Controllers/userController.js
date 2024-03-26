@@ -1,6 +1,6 @@
 // controllers/userController.js
 const User = require("../Models/user");
-
+const bcrypt = require("bcrypt");
 exports.createUser = async (req, res) => {
   try {
     const newUser = await User.create({
@@ -8,14 +8,14 @@ exports.createUser = async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
-    res.status(201).send(newUser);
-    res.redirect('/login')
+
+    res.redirect("/login");
   } catch (error) {
     res.status(400).send(error);
   }
 };
 
-export const login = async (req, res) => {
+exports.login = async (req, res) => {
   try {
     // check if all fields are provided
     if (!req.body.email || !req.body.password)
@@ -31,8 +31,7 @@ export const login = async (req, res) => {
     if (!match)
       return res.status(401).json({ message: "Invalid email or password" });
 
-    res.redirect('/')
-
+    res.redirect("/");
   } catch (e) {
     console.log(e);
     return res.status(500).json({
