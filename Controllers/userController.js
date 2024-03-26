@@ -3,10 +3,11 @@ const User = require("../Models/user");
 const bcrypt = require("bcrypt");
 exports.createUser = async (req, res) => {
   try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
     const newUser = await User.create({
       name: req.body.name,
       email: req.body.email,
-      password: req.body.password,
+      password: hashedPassword,
     });
 
     res.redirect("/login");
