@@ -8,12 +8,14 @@ mongoose.connect("mongodb://localhost:27017/dissertation");
 
 app.set("view engine", "ejs");
 app.use(express.json());
-app.get("/index", (req, res) => res.render("index.ejs"));
+app.use(express.urlencoded({ extended: true }));
+app.get("/", (req, res) => res.render("index.ejs"));
 app.get("/about", (req, res) => res.render("about"));
 app.get("/contact", (req, res) => res.render("contact"));
 app.get("/policy", (req, res) => res.render("policy"));
 app.get("/feedback", (req, res) => res.render("feedback"));
-app.get("/addUser", (req, res) => res.render("addUser"));
+app.get("/register", (req, res) => res.render("register"));
+app.get("/login", (req, res) => res.render("login"));
 
 app.use(userRoute);
 
