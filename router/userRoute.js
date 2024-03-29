@@ -1,9 +1,10 @@
-// routes/userRoutes.js
-const express = require('express');
-const router = express.Router();
-const userController = require('../Controllers/userController');
+import { Router } from "express";
+import userController from '../Controllers/userController.js';
+import { noAuthAPI, userAuthAPI } from "../middlewares/userMiddleware.js";
 
-router.post('/register', userController.createUser);
-router.post('/login', userController.login);
+const router = Router();
 
-module.exports = router;
+router.post("/register", noAuthAPI, userController.createUser);
+router.post("/login", noAuthAPI, userController.login);
+
+export default router;
