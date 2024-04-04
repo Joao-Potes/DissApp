@@ -2,8 +2,7 @@ import User from "../Models/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-
-export const createUser = async (req, res) => {
+const createUser = async (req, res) => {
   try {
     // check if all fields are provided
     if (!req.body.name || !req.body.email || !req.body.password)
@@ -34,7 +33,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-export const login = async (req, res) => {
+const login = async (req, res) => {
   try {
     // check if all fields are provided
     if (!req.body.email || !req.body.password)
@@ -57,6 +56,8 @@ export const login = async (req, res) => {
     // Set the auth token as a cookie
     res.cookie("token", token);
 
+   
+    
     return res.status(200).json({
       message: "Login successful",
       token,
@@ -69,3 +70,5 @@ export const login = async (req, res) => {
     });
   }
 };
+
+export { createUser, login };

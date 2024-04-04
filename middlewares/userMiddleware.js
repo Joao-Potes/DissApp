@@ -106,4 +106,4 @@ const userAuthPage = async (req, res, next) => {
   }
 };
 
-export  { noAuthAPI, userAuthAPI };
+export  { noAuthAPI, userAuthAPI, noAuthPage, userAuthPage};
