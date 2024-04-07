@@ -13,11 +13,13 @@ const port = 8000;
 mongoose.connect("mongodb://localhost:27017/dissertation");
 
 app.set("view engine", "ejs");
+app.use(express.static("public"));
+app.use('/public', express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(indexRoute);
-app.use( userRoute);
+app.use('/user', userRoute);
 
 app.listen(port, () =>
   console.log(`App listening at http://localhost:${port}`)

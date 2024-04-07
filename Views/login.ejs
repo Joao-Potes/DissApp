@@ -8,6 +8,8 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/utils.js" defer></script>
+    <script type="text/javascript" src="/login.js" defer></script>
     <title>Login</title>
   </head>
   <body>
@@ -35,8 +37,8 @@
     </nav>
 
     <div class="container-fluid">
-      <h2>User Registration</h2>
-      <form action="/login" method="post">
+      <h2>User Login</h2>
+      <form action="/user/login" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required /><br /><br />
 
@@ -45,7 +47,11 @@
 
         <label for="password">Password:</label>
         <input
-          type="password" id="password" name="password" required /><br /><br />
+          type="password"
+          id="password"
+          name="password"
+          required
+        /><br /><br />
         <button type="submit">Submit</button>
       </form>
       <div class="container-fluid">
