@@ -16,6 +16,7 @@ app.get("/policy", (req, res) => res.render("policy"));
 app.get("/feedback", (req, res) => res.render("feedback"));
 app.get("/register", (req, res) => res.render("register"));
 app.get("/login", (req, res) => res.render("login"));
+app.get("/language", (req, res) => res.render("langChoice"));
 
 app.use(userRoute);
 
