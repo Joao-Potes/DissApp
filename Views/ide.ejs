@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codeboard Online IDE</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <div class="bg-success text-white p-2"> Codeboard Online IDE </div>
+    <div class="bg-light text-right p-2">
+        Select Language:
+        &nbsp; &nbsp;
+        <select id="languages" class="form-control" onchange="changeLanguage()" style="display: inline-block; width: auto;">
+            <!-- <option value="c"> C </option>
+            <option value="cpp"> C++ </option>
+            <option value="java"> Java </option> -->
+            <option value="python"> Python </option>
+            <option value="node"> Node </option>
+        </select>
+    </div>
+    <div class="border border-dark p-2" id="editor"></div>
+
+    <div class="text-right p-2">
+        <button class="btn btn-success" onclick="executeCode()"> Run </button>
+    </div>
+
+    <div class="output"></div>
+
+    <!-- Bootstrap JS and its dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
+    <script src="js/ide.js"></script>
+
+</body>
+</html>
