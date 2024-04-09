@@ -21,7 +21,6 @@ app.get("/feedback", (req, res) => res.render("feedback"));
 app.get("/register", (req, res) => res.render("register"));
 app.get("/login", (req, res) => res.render("login"));
 app.get("/ide", (req, res) => res.render("ide"));
-app.get("/ide1", (req, res) => res.render("ide1"));
 
 
 app.use(userRoute);
