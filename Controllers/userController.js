@@ -2,6 +2,23 @@ import User from "../Models/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
+ const getUserById = async (req, res) => {
+  try {
+    let user;
+    const userId = res.locals.user._id;
+
+    if (userId) {
+      user = await User.findById(userId);
+    } else {
+      return res.status(500).json({ message: "No Users found" });
+    }
+    return res.json(user);
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
+
 const createUser = async (req, res) => {
   try {
     // check if all fields are provided
@@ -71,4 +88,4 @@ const login = async (req, res) => {
   }
 };
 
-export { createUser, login };
+export { createUser, login, getUserById};
