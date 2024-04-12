@@ -9,7 +9,7 @@ exports.compile = async (req, res) => {
     const code = req.body.code;
 
     const random = crypto.randomBytes(4).toString("hex");
-  const filePath = `temp/${random}.${language}`;
+    const filePath = `temp/${random}.${language}`;
     fs.writeFile(filePath, code, (err) => {
       if (err) {
         console.error(err);
@@ -55,18 +55,22 @@ exports.compile = async (req, res) => {
       }
 
       exec(command, (error, stdout, stderr) => {
-        fs.unlink(filePath, (err) => {
-          if (err) {
-            console.error(`Error deleting file: ${err}`);
-          } else {
-            console.log(`Deleted file: ${filePath}`);
-          }
-        });
         if (error) {
           console.error(`Exec error: ${error}`);
           return res.status(500).send(error);
         }
         res.send(stdout ? stdout : stderr);
+
+        const directory = "temp";
+        fs.readdir(directory, (err, files) => {
+          if (err) throw err;
+
+          for (const file of files) {
+            fs.unlink(path.join(directory, file), (err) => {
+              if (err) throw err;
+            });
+          }
+        });
       });
     });
   } catch (error) {
