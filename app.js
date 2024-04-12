@@ -1,3 +1,5 @@
+const http = require("http");
+const socketIo = require("socket.io");
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
@@ -9,7 +11,7 @@ const { compile } = require("ejs");
 mongoose.connect("mongodb://localhost:27017/dissertation");
 
 app.set("view engine", "ejs");
-app.use('/js', express.static(__dirname + '/js'));
+app.use("/js", express.static(__dirname + "/js"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -21,12 +23,22 @@ app.get("/feedback", (req, res) => res.render("feedback"));
 app.get("/register", (req, res) => res.render("register"));
 app.get("/login", (req, res) => res.render("login"));
 app.get("/ide", (req, res) => res.render("ide"));
-
+app.get("/chat", (req, res) => res.render("chat"));
 app.get("/language", (req, res) => res.render("langChoice"));
 
 app.use(userRoute);
 app.use(compilerRoute);
 
-app.listen(port, () =>
+// Create an HTTP server out of the Express app
+const server = http.createServer(app);
+// Create a Socket.IO server attached to the HTTP server
+
+const io = socketIo(server);
+
+const chatController = require("./Controllers/chatServerController");
+// Use the chat controller
+chatController(io);
+
+server.listen(port, () =>
   console.log(`App listening at http://localhost:${port}`)
 );
