@@ -12,6 +12,7 @@ mongoose.connect("mongodb://localhost:27017/dissertation");
 
 app.set("view engine", "ejs");
 app.use("/js", express.static(__dirname + "/js"));
+app.use("/css", express.static(__dirname + "/css"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +26,7 @@ app.get("/login", (req, res) => res.render("login"));
 app.get("/ide", (req, res) => res.render("ide"));
 app.get("/chat", (req, res) => res.render("chat"));
 app.get("/language", (req, res) => res.render("langChoice"));
+app.get("/challenges", (req, res) => res.render("challenges"));
 
 app.use(userRoute);
 app.use(compilerRoute);
