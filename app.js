@@ -7,6 +7,7 @@ const port = 8000;
 const userRoute = require("./router/userRoute.js");
 const compilerRoute = require("./router/compilerRoute.js");
 const indexRoute = require("./router/indexRoute.js");
+const i18nRoute = require("./router/i18nRoute.js");
 const { compile } = require("ejs");
 const i18n = require("./i18n.js");
 const cookieParser = require("cookie-parser");  
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(indexRoute);
 app.use(userRoute);
+app.use('/lang',i18nRoute); 
 app.use(compilerRoute);
 
 // Create an HTTP server out of the Express app
