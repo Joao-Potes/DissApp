@@ -9,8 +9,12 @@ const compilerRoute = require("./router/compilerRoute.js");
 const indexRoute = require("./router/indexRoute.js");
 const i18nRoute = require("./router/i18nRoute.js");
 const { compile } = require("ejs");
-const i18n = require("./i18n.js");
+
 const cookieParser = require("cookie-parser");  
+app.use(cookieParser());
+
+const i18n = require("./i18n.js");
+app.use(i18n.init);
 
 
 mongoose.connect("mongodb://localhost:27017/dissertation");
@@ -18,8 +22,6 @@ mongoose.connect("mongodb://localhost:27017/dissertation");
 app.set("view engine", "ejs");
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/css", express.static(__dirname + "/css"));
-app.use(i18n.init);
-app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
