@@ -140,5 +140,25 @@
   "goDescription": "Go (Golang) : Meilleur pour : Programmation concurrentielle, microservices, services web basés sur le cloud et applications haute performance. Forces : Syntaxe simple, modèle de concurrence efficace, exécution rapide, et support intégré pour la collecte des ordures.",
   "kotlinDescription": "Kotlin : Meilleur pour : Développement d'applications Android, développement côté serveur, et développement front-end web (via Kotlin/JS). Forces : Interopérabilité avec Java, syntaxe concise et expressive, et caractéristiques de sécurité (par exemple, sécurité contre les valeurs nulles).",
   "closing": "Chacun de ces langages a son créneau où il brille le plus. Le choix du langage dépend souvent des besoins spécifiques du projet, de l'infrastructure existante, des considérations de performance, et de l'expertise de l'équipe de développement.",
-  "userLogin": "Connexion utilisateur"
+  "userLogin": "Connexion utilisateur",
+
+
+  
+  "navHome": "Accueil",
+  "navTermsPolicies": "Termes et Politiques",
+  "navFeedback": "Retour",
+  "navAbout": "À propos",
+  "navContact": "Contact",
+  "navPractice": "Pratique",
+  "navLanguageChoice": "Choix de Langue",
+  "navChat": "Chat",
+  "navLogin": "Connexion",
+  "navRegister": "Inscription",
+  "navChallenges": "Défis",
+  "navIdiom": "Langue",
+  "navEnglish": "Anglais",
+  "navFrench": "Français",
+  "navPortuguese": "Portugais",
+  "navSpanish": "Espagnol"
 }
+
