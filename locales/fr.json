@@ -82,7 +82,7 @@
   "thankYou": "Merci",
   "thankYouDescription": "Merci d'être une partie de notre communauté et de prendre le temps de nous aider à grandir et à nous améliorer. Nous nous engageons à affiner continuellement notre plateforme pour mieux vous servir.",
   "header": "IDE en ligne Codeboard",
-  "selectLanguage": "Sélectionnez la langue : &nbsp; &nbsp;",
+  "selectLanguage": "Sélectionnez la langue : ;",
   "runButton": "Exécuter",
   "userRegistration": "Inscription de l'utilisateur",
   "nameLabel": "Nom :",
