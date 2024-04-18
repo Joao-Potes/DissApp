@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Language Choices</title>
-  </head>
-  <body>
+    <title>Language Choice</title>
+</head>
+<body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <div class="container-fluid">
         <!-- Links -->
@@ -19,87 +16,41 @@
     </nav>
 
     <div class="container-fluid">
-      <h2>Programming Language Choices</h2>
-      <p>
-        Each programming language has its strengths and is best suited for
-        certain types of projects. Here's a brief overview of some popular
-        programming languages and what they are commonly used for:
-      </p>
+      <h2><%= i18n.__("headerLC") %></h2>
+      <p><%= i18n.__("intro") %></p>
       <ol>
         <li>
-          <strong>Python:</strong> Best for: Web development, data analysis,
-          artificial intelligence (AI), machine learning (ML), scientific
-          computing, and automation. Strengths: Easy syntax, readability,
-          extensive libraries and frameworks (Django, Flask, Pandas, NumPy,
-          TensorFlow), and a strong community.
+          <strong>Python:</strong> <%= i18n.__("pythonDescription") %>
         </li>
         <li>
-          <strong>JavaScript:</strong> Best for: Web development (both front-end
-          and back-end with Node.js), building interactive web applications, and
-          developing desktop and mobile applications (with frameworks like
-          Electron and React Native). Strengths: High compatibility with web
-          browsers, asynchronous programming capabilities, and a vast ecosystem
-          of libraries and frameworks (React, Angular, Vue.js).
+          <strong>JavaScript:</strong> <%= i18n.__("javascriptDescription") %>
         </li>
         <li>
-          <strong>Java:</strong> Best for: Enterprise-level backend systems,
-          Android app development, web applications, and large-scale system
-          development. Strengths: Platform independence (write once, run
-          anywhere - WORA), robust standard libraries, strong memory management,
-          and widespread use in large organizations.
+          <strong>Java:</strong> <%= i18n.__("javaDescription") %>
         </li>
         <li>
-          <strong>C#:</strong> Best for: Developing Windows applications, game
-          development with Unity, enterprise applications, and mobile apps (via
-          Xamarin). Strengths: Seamless integration with the .NET framework,
-          strong typing, extensive libraries, and good support for parallel
-          programming.
+          <strong>C#:</strong> <%= i18n.__("csharpDescription") %>
         </li>
         <li>
-          <strong>C++:</strong> Best for: System/software development, game
-          development, real-time simulation, high-performance applications, and
-          client-server applications. Strengths: Close to hardware,
-          object-oriented, powerful standard library, and control over system
-          resources.
+          <strong>C++:</strong> <%= i18n.__("cplusplusDescription") %>
         </li>
         <li>
-          <strong>Swift:</strong> Best for: iOS and macOS applications, and to a
-          lesser extent, web backend development. Strengths: Safety (designed to
-          eliminate unsafe code), fast performance, and interoperability with
-          Objective-C.
+          <strong>Swift:</strong> <%= i18n.__("swiftDescription") %>
         </li>
         <li>
-          <strong>Ruby:</strong> Best for: Web applications, especially with the
-          Ruby on Rails framework, and scripting. Strengths: Elegant syntax,
-          ease of learning, and a strong focus on developer happiness and
-          productivity.
+          <strong>Ruby:</strong> <%= i18n.__("rubyDescription") %>
         </li>
         <li>
-          <strong>PHP:</strong> Best for: Server-side web development, content
-          management systems (like WordPress), and dynamic website content.
-          Strengths: Wide range of databases support, integrated with various
-          web development frameworks (Laravel, Symfony), and extensive
-          documentation.
+          <strong>PHP:</strong> <%= i18n.__("phpDescription") %>
         </li>
         <li>
-          <strong>Go (Golang):</strong> Best for: Concurrent programming,
-          microservices, cloud-based/web services, and high-performance
-          applications. Strengths: Simple syntax, efficient concurrency model,
-          fast execution, and built-in support for garbage collection.
+          <strong>Go (Golang):</strong> <%= i18n.__("goDescription") %>
         </li>
         <li>
-          <strong>Kotlin:</strong> Best for: Android app development,
-          server-side development, and web frontend development (via Kotlin/JS).
-          Strengths: Interoperable with Java, concise and expressive syntax, and
-          safety features (e.g., null safety).
+          <strong>Kotlin:</strong> <%= i18n.__("kotlinDescription") %>
         </li>
       </ol>
-      <p>
-        Each of these languages has its niche where it shines the brightest. The
-        choice of language often depends on the specific requirements of the
-        project, existing infrastructure, performance considerations, and the
-        development team's expertise.
-      </p>
+      <p><%= i18n.__("closing") %></p>
     </div>
-  </body>
+</body>
 </html>

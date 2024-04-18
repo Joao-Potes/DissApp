@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Chat App</title>
+    <title>Chat</title>
     <script defer src="/socket.io/socket.io.js"></script>
     <script defer src="/js/chat.js"></script>
     <link rel="stylesheet" href="/css/chatStyle.css" />
@@ -23,7 +23,7 @@
     <div id="message-container"></div>
     <form id="send-container">
       <input type="text" id="message-input" />
-      <button type="submit" id="send-button">Send</button>
+      <button type="submit" id="send-button"><%= i18n.__("sendButton") %></button>
     </form>
   </body>
 </html>

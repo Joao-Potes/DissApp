@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,53 +19,24 @@
     </nav>
 
     <div class="container-fluid">
-      <h1>Welcome to Student Assistant!</h1>
-      <p>Empower Your Coding Journey Today!</p>
+      <h1><%= i18n.__("welcome") %></h1>
+      <p><%= i18n.__("empower") %></p>
 
-      <h2>Unlock the Language of the Future</h2>
-      <p>
-        Coding is an essential skill in today’s digital world. At Student
-        Assistant, we're here to make coding accessible to everyone, tailored to
-        fit your personal learning style and pace.
-      </p>
+      <h2><%= i18n.__("unlock") %></h2>
+      <p><%= i18n.__("codingSkill") %></p>
 
-      <h2>What We Offer</h2>
+      <h2><%= i18n.__("offer") %></h2>
       <ul>
-        <li>
-          Personalized Learning Guides: Start from scratch or enhance your
-          skills through customized programming guides and lessons.
-        </li>
-        <li>
-          Adaptive Learning Technologies: Our smart platform adjusts the
-          challenge level based on your interactions, keeping you perpetually
-          engaged.
-        </li>
-        <li>
-          Multilingual Support: Learn in the language you're most comfortable
-          with, thanks to our extensive language support.
-        </li>
-        <li>
-          Collaborative Chat: Tackle real-world problems with peers to gain
-          practical experience and foster community learning.
-        </li>
-        <li>
-          Gamified Experience: Make learning fun with gamified challenges that
-          motivate and reward you for your progress and creativity.
-        </li>
-        <li>
-          Continuous Feedback Loop: We evolve with your feedback, continuously
-          adapting to better meet your educational needs.
-        </li>
+        <li><%= i18n.__("personalizedLearning") %></li>
+        <li><%= i18n.__("adaptiveLearning") %></li>
+        <li><%= i18n.__("multilingualSupport") %></li>
+        <li><%= i18n.__("collaborativeChat") %></li>
+        <li><%= i18n.__("gamifiedExperience") %></li>
+        <li><%= i18n.__("continuousFeedback") %></li>
       </ul>
 
-      <h2>Why Choose Us?</h2>
-      <p>
-        At Student Assistant, you’re more than just a learner—you’re part of a
-        global community. Join us in our mission to democratize coding
-        education, making it engaging, effective, and enjoyable for everyone.
-      </p>
-
-      
+      <h2><%= i18n.__("whyChooseUs") %></h2>
+      <p><%= i18n.__("chooseUsDescription") %></p>
     </div>
   </body>
 </html>
