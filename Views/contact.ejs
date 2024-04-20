@@ -7,39 +7,40 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/css/background.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Contact</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container-fluid">
         <!-- Links -->
         <%- include('navbar.ejs') %>
       </div>
     </nav>
+    <div class="container-fluid" style="margin-top: 80px">
+      <h1><%= i18n.__("contactUs") %></h1>
+      <p><%= i18n.__("contactUsDescription") %></p>
 
-    <h1><%= i18n.__("contactUs") %></h1>
-    <p>
-      <%= i18n.__("contactUsDescription") %>
-    </p>
+      <h2><%= i18n.__("emailUs") %></h2>
+      <p><%= i18n.__("generalInquiries") %></p>
+      <p><%= i18n.__("support") %></p>
+      <p><%= i18n.__("feedback") %></p>
 
-    <h2><%= i18n.__("emailUs") %></h2>
-    <p><%= i18n.__("generalInquiries") %></p>
-    <p><%= i18n.__("support") %></p>
-    <p><%= i18n.__("feedback") %></p>
+      <h2><%= i18n.__("callUs") %></h2>
+      <p><%= i18n.__("phone") %></p>
 
-    <h2><%= i18n.__("callUs") %></h2>
-    <p><%= i18n.__("phone") %></p>
+      <h2><%= i18n.__("followUs") %></h2>
+      <p><%= i18n.__("followUsDescription") %></p>
+      <p><%= i18n.__("facebook") %></p>
+      <p><%= i18n.__("twitter") %></p>
+      <p><%= i18n.__("linkedin") %></p>
 
-    <h2><%= i18n.__("followUs") %></h2>
-    <p><%= i18n.__("followUsDescription") %></p>
-    <p><%= i18n.__("facebook") %></p>
-    <p><%= i18n.__("twitter") %></p>
-    <p><%= i18n.__("linkedin") %></p>
-
-    <h2><%= i18n.__("mailingAddress") %></h2>
-    <p><%= i18n.__("address1") %></p>
-    <p><%= i18n.__("address2") %></p>
-    <p><%= i18n.__("address3") %></p>
+      <h2><%= i18n.__("mailingAddress") %></h2>
+      <p><%= i18n.__("address1") %></p>
+      <p><%= i18n.__("address2") %></p>
+      <p><%= i18n.__("address3") %></p>
+    </div>
   </body>
 </html>
