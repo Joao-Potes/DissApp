@@ -1,56 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/background.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Language Choice</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container-fluid">
         <!-- Links -->
         <%- include('navbar.ejs') %>
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 80px">
       <h2><%= i18n.__("headerLC") %></h2>
       <p><%= i18n.__("intro") %></p>
       <ol>
-        <li>
-          <strong>Python:</strong> <%= i18n.__("pythonDescription") %>
-        </li>
+        <li><strong>Python:</strong> <%= i18n.__("pythonDescription") %></li>
         <li>
           <strong>JavaScript:</strong> <%= i18n.__("javascriptDescription") %>
         </li>
-        <li>
-          <strong>Java:</strong> <%= i18n.__("javaDescription") %>
-        </li>
-        <li>
-          <strong>C#:</strong> <%= i18n.__("csharpDescription") %>
-        </li>
-        <li>
-          <strong>C++:</strong> <%= i18n.__("cplusplusDescription") %>
-        </li>
-        <li>
-          <strong>Swift:</strong> <%= i18n.__("swiftDescription") %>
-        </li>
-        <li>
-          <strong>Ruby:</strong> <%= i18n.__("rubyDescription") %>
-        </li>
-        <li>
-          <strong>PHP:</strong> <%= i18n.__("phpDescription") %>
-        </li>
-        <li>
-          <strong>Go (Golang):</strong> <%= i18n.__("goDescription") %>
-        </li>
-        <li>
-          <strong>Kotlin:</strong> <%= i18n.__("kotlinDescription") %>
-        </li>
+        <li><strong>Java:</strong> <%= i18n.__("javaDescription") %></li>
+        <li><strong>C#:</strong> <%= i18n.__("csharpDescription") %></li>
+        <li><strong>C++:</strong> <%= i18n.__("cplusplusDescription") %></li>
+        <li><strong>Swift:</strong> <%= i18n.__("swiftDescription") %></li>
+        <li><strong>Ruby:</strong> <%= i18n.__("rubyDescription") %></li>
+        <li><strong>PHP:</strong> <%= i18n.__("phpDescription") %></li>
+        <li><strong>Go (Golang):</strong> <%= i18n.__("goDescription") %></li>
+        <li><strong>Kotlin:</strong> <%= i18n.__("kotlinDescription") %></li>
       </ol>
       <p><%= i18n.__("closing") %></p>
     </div>
-</body>
+  </body>
 </html>

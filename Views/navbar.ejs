@@ -1,47 +1,68 @@
-<!-- Links -->
-<link rel="stylesheet" href="/css/navbar.css" />
-<ul class="navbar-nav">
-  <li class="nav-item">
-    <a class="nav-link" href="/"><%= i18n.__("navHome") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="policy"><%= i18n.__("navTermsPolicies") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="feedback"><%= i18n.__("navFeedback") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="about"><%= i18n.__("navAbout") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="contact"><%= i18n.__("navContact") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="ide"><%= i18n.__("navPractice") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="langChoice"><%= i18n.__("navLanguageChoice") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="chat"><%= i18n.__("navChat") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="login"><%= i18n.__("navLogin") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="register"><%= i18n.__("navRegister") %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="challenges"><%= i18n.__("navChallenges") %></a>
-  </li>
-  <li class="nav-item dropdown">
-    <button class="dropbtn"><%= i18n.__("navIdiom") %></button>
-    <div class="dropdown-content">
-        <a href="/lang/en"><%= i18n.__("navEnglish") %></a>
-        <a href="/lang/fr"><%= i18n.__("navFrench") %></a>
-        <a href="/lang/pt"><%= i18n.__("navPortuguese") %></a>
-        <a href="/lang/es"><%= i18n.__("navSpanish") %></a>
-    </div>
-  </li>
-</ul>
-
+    <a class="nav-link" href="/">
+      <img
+        src="/css/images/logo2.png"
+        alt="Avatar Logo"
+        style="width: 40px"
+        class="rounded-pill"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="policy"><%= i18n.__("navTermsPolicies") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="feedback"><%= i18n.__("navFeedback") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about"><%= i18n.__("navAbout") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact"><%= i18n.__("navContact") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ide"><%= i18n.__("navPractice") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="langChoice"
+          ><%= i18n.__("navLanguageChoice") %></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="chat"><%= i18n.__("navChat") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login"><%= i18n.__("navLogin") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register"><%= i18n.__("navRegister") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="challenges"
+          ><%= i18n.__("navChallenges") %></a
+        >
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+        >
+          <%= i18n.__("navIdiom") %></a
+        >
+        <ul class="dropdown-menu">
+          <li><a href="/lang/en"><%= i18n.__("navEnglish") %></a></li>
+          <li><a href="/lang/fr"><%= i18n.__("navFrench") %></a></li>
+          <li><a href="/lang/pt"><%= i18n.__("navPortuguese") %></a></li>
+          <li><a href="/lang/es"><%= i18n.__("navSpanish") %></a></li>
+        </ul>
+      </li>
+    </ul>
