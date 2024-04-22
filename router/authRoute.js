@@ -1,18 +1,18 @@
 const express = require("express");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const User = require("../models/User"); // Assuming you have a User model
 
 passport.use(
-  new LocalStrategy(function (username, password, done) {
-    User.findOne({ username: username }, function (err, user) {
+  new LocalStrategy(function (email, password, done) {
+    User.findOne({ email: email }, function (err, user) {
       if (err) {
         return done(err);
       }
       if (!user) {
         return done(null, false, {
-          message: "Incorrect username or password.",
+          message: "Incorrect email or password.",
         });
       }
 
@@ -23,7 +23,7 @@ passport.use(
         } else {
           // Passwords don't match
           return done(null, false, {
-            message: "Incorrect username or password.",
+            message: "Incorrect email or password.",
           });
         }
       });
@@ -61,17 +61,18 @@ router.post("/logout", function (req, res, next) {
   res.redirect("/");
 });
 
-router.get("/signup", function (req, res, next) {
-  res.render("signup");
+router.get("/register", function (req, res, next) {
+  res.render("register");
 });
 
-router.post("/signup", function (req, res, next) {
+router.post("/register", function (req, res, next) {
   bcrypt.hash(req.body.password, 10, function (err, hashedPassword) {
     if (err) {
       return next(err);
     }
     const user = new User({
-      username: req.body.username,
+      name: req.body.name,
+      email: req.body.email,
       password: hashedPassword,
     });
 

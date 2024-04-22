@@ -1,4 +1,4 @@
-// controllers/userController.js
+/* // controllers/userController.js
 const User = require("../Models/user");
 const bcrypt = require("bcrypt");
 exports.createUser = async (req, res) => {
@@ -40,3 +40,4 @@ exports.login = async (req, res) => {
     });
   }
 };
+ */
