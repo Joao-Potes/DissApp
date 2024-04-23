@@ -22,7 +22,7 @@
 
     <div class="container-fluid">
       <h2><%= i18n.__("userRegistration") %></h2>
-      <form action="/register" method="post">
+      <form action="/users/register" method="post">
         <label for="name"><%= i18n.__("nameLabel") %></label>
         <input type="text" id="name" name="name" required /><br /><br />
 
@@ -34,6 +34,13 @@
           type="password"
           id="password"
           name="password"
+          required
+        /><br /><br />
+        <label for="password2"><%= i18n.__("passwordLabel2") %></label>
+        <input
+          type="password"
+          id="password2"
+          name="password2"
           required
         /><br /><br />
 

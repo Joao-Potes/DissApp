@@ -88,6 +88,7 @@
   "nameLabel": "Nom :",
   "emailLabel": "Email :",
   "passwordLabel": "Mot de passe :",
+  "passwordLabel2": "Confirmer le mot de passe :",
   "submitButton": "Soumettre",
   "gdprTitle": "Déclaration de conformité au RGPD",
   "gdprIntro": "Student Assistant s'engage à protéger les données personnelles et la vie privée de nos utilisateurs. Nous adhérons strictement aux directives établies par le Règlement Général sur la Protection des Données (RGPD), en vigueur depuis le 25 mai 2018.",
