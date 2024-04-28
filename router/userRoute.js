@@ -11,11 +11,22 @@ const { forwardAuthenticated } = require("../config/auth");
 router.post("/register", forwardAuthenticated, UserController.createUser);
 
 // Login
+// Login
 router.post("/login", (req, res, next) => {
-  passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/login",
-    failureFlash: true,
+  passport.authenticate("local", (err, user, info) => {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      // If authentication failed, `info` will contain a message.
+      return res.render('login', { errors: [{ msg: info.message }] });
+    }
+    req.logIn(user, (err) => {
+      if (err) {
+        return next(err);
+      }
+      return res.redirect('/');
+    });
   })(req, res, next);
 });
 
