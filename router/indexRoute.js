@@ -16,6 +16,6 @@ router.get("/chat", ensureAuthenticated, indexController.chat);
 router.get("/feedback", ensureAuthenticated, indexController.feedback);
 router.get("/challenges", ensureAuthenticated, indexController.challenges);
 router.get("/langchoice", ensureAuthenticated, indexController.langchoice);
-router.get("/policy",forwardAuthenticated, indexController.policy);
+router.get("/policy", indexController.policy);
 
 module.exports = router;
