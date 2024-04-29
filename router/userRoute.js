@@ -10,7 +10,7 @@ const { forwardAuthenticated } = require("../config/auth");
 // Register
 router.post("/register", forwardAuthenticated, UserController.createUser);
 
-// Login
+
 // Login
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {

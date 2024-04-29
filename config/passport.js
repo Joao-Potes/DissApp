@@ -1,10 +1,11 @@
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcrypt");
-
-// Load User model
 const User = require("../Models/user");
 
+// Load User model
+
 module.exports = function (passport) {
+  // Local Strategy for authenticating users
   passport.use(
     new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
       // Match user
@@ -28,10 +29,12 @@ module.exports = function (passport) {
     })
   );
 
+  // Serialize user object to store in session
   passport.serializeUser(function (user, done) {
     done(null, user.id);
   });
 
+  // Deserialize user object from session
   passport.deserializeUser(async function (id, done) {
     try {
       const user = await User.findById(id);
