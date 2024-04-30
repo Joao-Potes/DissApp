@@ -1,17 +1,17 @@
 const express = require("express");
-const router = express.Router();
 const bcrypt = require("bcrypt");
 const passport = require("passport");
-// Load User model
 const User = require("../Models/user");
 const UserController = require("../Controllers/userController");
 const { forwardAuthenticated } = require("../config/auth");
 
-// Register
+const router = express.Router();
+// Load User model
+
+// Register route
 router.post("/register", forwardAuthenticated, UserController.createUser);
 
-
-// Login
+// Login route
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) {
@@ -30,7 +30,7 @@ router.post("/login", (req, res, next) => {
   })(req, res, next);
 });
 
-// Logout
+// Logout route
 router.get("/logout", (req, res) => {
   req.logout((err) => {
     if (err) {
