@@ -1,3 +1,5 @@
+// ./router/i18nRoute.js
+
 const { Router } = require("express");
 const i18nController = require("../Controllers/i18nController");
 

@@ -1,4 +1,4 @@
-// chatController.js
+// ./controllers/chatServerController.js
 
 // Create an empty object to store the connected users
 const users = {};

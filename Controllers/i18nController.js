@@ -1,3 +1,4 @@
+// ./Controllers/i18nController.js
 // Set the language to English
 const en = (req, res) => {
   res.cookie("i18n", "en"); // Set a cookie with the language code "en"

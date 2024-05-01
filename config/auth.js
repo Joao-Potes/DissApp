@@ -1,3 +1,4 @@
+// ./config/auth.js
 module.exports = {
   // Middleware to ensure that the user is authenticated
   ensureAuthenticated: function(req, res, next) {

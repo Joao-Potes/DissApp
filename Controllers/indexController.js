@@ -1,3 +1,4 @@
+//./Controllers/indexController.js
 const i18n = require("../config/i18n.js");
 
 // Importing the i18n module

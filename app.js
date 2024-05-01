@@ -1,3 +1,4 @@
+// app.js
 const http = require("http"); // Import the HTTP module
 const socketIo = require("socket.io"); // Import the Socket.IO module
 const express = require("express"); // Import the Express module
@@ -14,6 +15,8 @@ const session = require("express-session"); // Import the express-session module
 const i18n = require("./config/i18n.js"); // Import the i18n module
 const flash = require("connect-flash"); // Import the connect-flash module
 const chatController = require("./Controllers/chatServerController"); // Import the chatServerController module
+const dotenv = require("dotenv"); // Import the dotenv module
+dotenv.config(); // Configure the dotenv module
 
 const app = express(); // Create an instance of the Express application
 const port = 8000; // Set the port number
@@ -32,7 +35,7 @@ app.use((req, res, next) => {
 
 require("./config/passport")(passport); // Configure Passport
 
-mongoose.connect("mongodb://localhost:27017/dissertation"); // Connect to the MongoDB database
+mongoose.connect(process.env.MONGODB_URI); // Connect to the MongoDB database
 
 app.set("view engine", "ejs"); // Set the view engine to EJS
 app.use("/public", express.static(__dirname + "/public")); // Serve static files from the "public" directory
@@ -40,7 +43,7 @@ app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 app.use(
   session({
-    secret: "secret", // Set the session secret
+    secret: process.env.SESSION_SECRET, // Set the session secret
     resave: true,
     saveUninitialized: true,
   })
