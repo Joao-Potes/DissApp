@@ -88,6 +88,7 @@
   "nameLabel": "Nome:",
   "emailLabel": "E-mail:",
   "passwordLabel": "Senha:",
+  "passwordLabel2": "Confirmar Senha:",
   "submitButton": "Enviar",
   "gdprTitle": "Declaração de Conformidade com o GDPR",
   "gdprIntro": "O Student Assistant compromete-se a garantir a proteção dos dados pessoais e a privacidade de nossos usuários. Adotamos estritamente as diretrizes estabelecidas pelo Regulamento Geral sobre a Proteção de Dados (GDPR), efetivo a partir de 25 de maio de 2018.",
@@ -141,8 +142,6 @@
   "kotlinDescription": "Kotlin: Melhor para: Desenvolvimento de aplicativos Android, desenvolvimento do lado do servidor e desenvolvimento de front-end web (via Kotlin/JS). Forças: Interoperabilidade com Java, sintaxe concisa e expressiva, e recursos de segurança (por exemplo, segurança contra nulos).",
   "closing": "Cada uma dessas linguagens tem seu nicho onde brilha mais. A escolha da linguagem muitas vezes depende dos requisitos específicos do projeto, da infraestrutura existente, das considerações de desempenho e da experiência da equipe de desenvolvimento.",
   "userLogin": "Login do Usuário",
-
-
   "navHome": "Início",
   "navTermsPolicies": "Termos e Políticas",
   "navFeedback": "Feedback",
@@ -158,6 +157,6 @@
   "navEnglish": "Inglês",
   "navFrench": "Francês",
   "navPortuguese": "Português",
-  "navSpanish": "Espanhol"
+  "navSpanish": "Espanhol",
+  "intro": "Cada linguagem de programação tem seus pontos fortes e é mais adequada para determinados tipos de projetos. Aqui está uma breve visão geral de algumas linguagens de programação populares e para que elas são comumente usadas:"
 }
-

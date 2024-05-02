@@ -1,3 +1,4 @@
+// ./Controllers/compilerController.js
 const fs = require("fs");
 const { exec } = require("child_process");
 const crypto = require("crypto");
@@ -10,6 +11,8 @@ exports.compile = async (req, res) => {
 
     const random = crypto.randomBytes(4).toString("hex");
     const filePath = `temp/${random}.${language}`;
+
+    // Write the code to a file
     fs.writeFile(filePath, code, (err) => {
       if (err) {
         console.error(err);
@@ -20,9 +23,11 @@ exports.compile = async (req, res) => {
       let command;
       switch (language) {
         case "python":
+          // Execute Python code
           command = `C:\\Users\\J\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe ${filePath}`;
           break;
         case "node":
+          // Write the code to a JavaScript file
           fs.writeFile(`${filePath}.js`, code, (err) => {
             if (err) {
               console.error(err);
@@ -30,6 +35,7 @@ exports.compile = async (req, res) => {
               return;
             }
           });
+          // Execute JavaScript code
           command = `node ${filePath}.js`;
           break;
         /* case "c":
@@ -54,6 +60,7 @@ exports.compile = async (req, res) => {
           return res.status(400).send("Invalid language specified");
       }
 
+      // Execute the command
       exec(command, (error, stdout, stderr) => {
         if (error) {
           console.error(`Exec error: ${error}`);
@@ -61,6 +68,7 @@ exports.compile = async (req, res) => {
         }
         res.send(stdout ? stdout : stderr);
 
+        // Delete the temporary files
         const directory = "temp";
         fs.readdir(directory, (err, files) => {
           if (err) throw err;

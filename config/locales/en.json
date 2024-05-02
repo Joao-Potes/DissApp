@@ -88,6 +88,7 @@
   "nameLabel": "Name:",
   "emailLabel": "Email:",
   "passwordLabel": "Password:",
+  "passwordLabel2": "Confirm Password:",
   "submitButton": "Submit",
   "gdprTitle": "GDPR Compliance Statement",
   "gdprIntro": "Student Assistant is committed to ensuring the protection of personal data and the privacy of our users. We adhere strictly to the guidelines set out by the General Data Protection Regulation (GDPR), effective as of May 25, 2018.",

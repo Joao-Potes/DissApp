@@ -1,18 +1,44 @@
-const Router = require('express').Router;
-const indexController = require('../Controllers/indexController');
-const router = Router();
+// ./router/indexRoute.js
+const Router = require("express").Router;
+const indexController = require("../Controllers/indexController");
 
-router.get('/', indexController.home);
-router.get('/login', indexController.login);
-router.get('/register', indexController.register);
-router.get('/about', indexController.about);
-router.get('/contact', indexController.contact);
-router.get('/ide', indexController.ide);
-router.get('/chat', indexController.chat);
-router.get('/feedback', indexController.feedback);
-router.get('/challenges', indexController.challenges);
-router.get('/langchoice', indexController.langchoice);
-router.get('/policy', indexController.policy);
+const router = Router();
+const {
+  ensureAuthenticated,
+  forwardAuthenticated,
+} = require("../config/auth");
+
+// Home page
+router.get("/", ensureAuthenticated, indexController.home);
+
+// Login page
+router.get("/login", forwardAuthenticated, indexController.login);
+
+// Register page
+router.get("/register", forwardAuthenticated, indexController.register);
+
+// About page
+router.get("/about", ensureAuthenticated, indexController.about);
+
+// Contact page
+router.get("/contact", ensureAuthenticated, indexController.contact);
+
+// IDE page
+router.get("/ide", ensureAuthenticated, indexController.ide);
+
+// Chat page
+router.get("/chat", ensureAuthenticated, indexController.chat);
+
+// Feedback page
+router.get("/feedback", ensureAuthenticated, indexController.feedback);
+
+// Challenges page
+router.get("/challenges", ensureAuthenticated, indexController.challenges);
+
+// Language choice page
+router.get("/langchoice", ensureAuthenticated, indexController.langchoice);
+
+// Policy page
+router.get("/policy", indexController.policy);
 
 module.exports = router;
-
