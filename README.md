@@ -16,6 +16,8 @@ Follow these steps to set up and run the application:
    ```bash
    git clone https://github.com/Joao-Potes/DissApp.git [GitHub-Repository-URL]
    cd DissApp [repository-name]
+```
+
 
 ###2.Install Node.js
 Download and install Node.js from the official Node.js website.
@@ -27,24 +29,25 @@ Download and install Python from the official website, if you which to use the o
 In the project directory terminal run:
    ```bash
    npm install
-
+```
 This command installs all the necessary dependencies listed in the package.json file.
 
 ###4. Setup Environment Variables
 Create a '.env' file in the root directory of the project, and add the necessary environment variables:
-   ´´´bash
+   ```bash
    MONGODB_URI=mongodb://username:password@localhost:27017/myFirstDatabase
    SESSION_SECRET=your_secret_key
    COMPILER_DIR=your_python_executable_file_directory
+   ```
 
 Replace username, password, myFirstDatabase, and your_secret_key with your actual MongoDB credentials and session secret.
 You can find the python executable file directory by opening your cmd prompt shell and running: 'where python', then make sure you follow a syntax like C:\\Users\\J\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe
  
 ###5.Start Application
 You can run the application by running the following command:
-   ´´´bash
+   ```bash
    node app.js
-
+```
 The application should be running on port localhost:8000, a link will be provided in the terminal.
 
 
