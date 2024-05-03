@@ -3,6 +3,7 @@ const fs = require("fs");
 const { exec } = require("child_process");
 const crypto = require("crypto");
 const path = require("path");
+require("dotenv").config();
 
 exports.compile = async (req, res) => {
   try {
@@ -24,7 +25,7 @@ exports.compile = async (req, res) => {
       switch (language) {
         case "python":
           // Execute Python code
-          command = `C:\\Users\\J\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe ${filePath}`;
+          command = `${process.env.COMPILER_DIR} ${filePath}`;
           break;
         case "node":
           // Write the code to a JavaScript file
@@ -38,24 +39,7 @@ exports.compile = async (req, res) => {
           // Execute JavaScript code
           command = `node ${filePath}.js`;
           break;
-        /* case "c":
-                  const outputExeC = `${random}.exe`;
-                  exec(`C:\\MinGW\\bin\\gcc.exe ${filePath} -o ${outputExeC}`, (error) => {
-                    if (error) {
-                      console.error(`GCC compile error: ${error}`);
-                    }
-                  });
-                  command = `${__dirname}/${outputExeC}`;
-                  break;
-                case "cpp":
-                  const outputExeCpp = `${random}.exe`;
-                  exec(`g++ ${filePath} -o ${outputExeCpp}`, (error) => {
-                    if (error) {
-                      console.error(`G++ compile error: ${error}`);
-                    }
-                  }); 
-                  command = `${__dirname}/${outputExeCpp}`;
-                  break;*/
+        
         default:
           return res.status(400).send("Invalid language specified");
       }
