@@ -15,4 +15,6 @@ Follow these steps to set up and run the application:
 1. **Clone the repository**:
    ```bash
    git clone [Your-GitHub-Repository-URL]
-   cd [repository-name]
+   cd DissApp
+
+   
