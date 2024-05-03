@@ -67,7 +67,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 chatController(io); // Use the chatServerController
-
+// Start the server and log the listening URL
 server.listen(port, () =>
-  console.log(`App listening at http://localhost:${port}`) // Start the server and log the listening URL
+  console.log(`App listening at http://localhost:${port}`) 
 );
