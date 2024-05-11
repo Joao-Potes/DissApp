@@ -56,7 +56,7 @@ app.use(passport.session()); // Use Passport session
 app.use(flash()); // Use the connect-flash middleware
 
 app.use(indexRoute); // Use the indexRoute middleware
-app.use("/users", userRoute); // Use the userRoute middleware for "/users" path
+app.use(userRoute); // Use the userRoute middleware
 app.use("/lang", i18nRoute); // Use the i18nRoute middleware for "/lang" path
 app.use(compilerRoute); // Use the compilerRoute middleware
 
@@ -69,5 +69,5 @@ const io = socketIo(server);
 chatController(io); // Use the chatServerController
 // Start the server and log the listening URL
 server.listen(port, () =>
-  console.log(`App listening at http://localhost:${port}`) 
+  console.log(`App listening at http://localhost:${port}`)
 );
